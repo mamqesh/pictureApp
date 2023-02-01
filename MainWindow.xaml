@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
+
+        <Canvas Background="White" MouseMove="Canvas_MouseMove" MouseLeftButtonDown="Canvas_MouseDown" Name="canvas" Grid.Column="1"></Canvas>
+        <Label FontSize="25" Content="Цвет контура" HorizontalAlignment="Center" Margin="0,347,0,0" VerticalAlignment="Top"/>
+        <Slider  HorizontalAlignment="Center"  Margin="0,284,0,0" VerticalAlignment="Top" Width="240" Height="38"/>
+        <Button Content="Прямоугольник" Height="40" Width="240" FontSize="25" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Овал" Height="40" Width="240" FontSize="25" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top"/>
+        <Button Content="Линия" Height="40" Width="240" FontSize="25" HorizontalAlignment="Center" Margin="0,160,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbFill" HorizontalAlignment="Center" FontSize="25" Margin="0,395,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="cbFill_SelectionChanged"/>
+        <Label FontSize="25" Content="Цвет заливки" HorizontalAlignment="Center" Margin="0,449,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbContr" HorizontalAlignment="Center" FontSize="25" Margin="0,497,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="cbContr_SelectionChanged"/>
+        <Label FontSize="25" Content="Размер контура" HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
